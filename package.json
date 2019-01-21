@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "lint": "eslint --cache src/**/*",
+    "lint-fix": "eslint --fix src/**/*",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -20,10 +22,26 @@
     "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
+    "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.18",
+    "@typescript-eslint/eslint-plugin": "^1.0.0",
+    "@typescript-eslint/parser": "^1.0.0",
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "gl": "^4.1.1",
+    "jest": "^23.6.0",
+    "prettier": "1.16.0",
+    "ts-jest": "^23.10.5",
     "ts-loader": "^5.3.1",
     "typescript": "^3.2.2",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.11"
+  },
+  "jest": {
+    "setupFiles": [
+      "jest-canvas-mock"
+    ]
   }
 }

@@ -1,0 +1,16 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+      "@typescript-eslint",
+      "prettier"
+  ],
+  "env": {
+    "jest": true,
+    "node": true
+  },
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "indent": [2, 2],
+    "@typescript-eslint/indent": [2, 2]
+  }
+}

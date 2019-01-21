@@ -19,5 +19,8 @@
   },
   "files": [
     "./src/index.ts"
+  ],
+  "types": [
+    "babylonjs"
   ]
 }
