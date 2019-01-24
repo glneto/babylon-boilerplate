@@ -1,4 +1,5 @@
 import GameWindow from "../interfaces/GameWindow";
+const gl = require('gl');
 
 export function mockDocumentBody() {
   document.body.innerHTML = '<canvas id="renderCanvas" touch-action="none"></canvas>';
@@ -7,8 +8,7 @@ export function mockDocumentBody() {
 export function mockCanvas() {
   const gameWindow = window as GameWindow;
   gameWindow.canvas = document.getElementById('renderCanvas') as HTMLCanvasElement;
-  gameWindow.canvas.getContext = () => require('gl')(500, 500);
-  gameWindow.canvas.innerHTML = '<canvas id="renderCanvas" touch-action="none"></canvas>';
+  gameWindow.canvas.getContext = () => gl(500, 500);
 }
 
 export default () => {
