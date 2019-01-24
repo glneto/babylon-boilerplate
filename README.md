@@ -1,5 +1,5 @@
 # babylon-boilerplate
-A Babylon JS boilerplate setup with Typescript, Babel and Webpack
+A Babylon JS boilerplate setup with Typescript, Babel, Webpack and Jest
 
 # How to start
 1. npm install
